@@ -4,25 +4,36 @@
 
 The purpose of this analysis is to view Amazon Vine reviews and determine if there is any bias toward favorable reviews from Vine members in the dataset. Given the choice of various products ranging from clothing apparel to wireless products, I chose reviews of video games. I used Amazon’s AWS services, Postgres and pgAdmin, and Pyspark and Google Collaboratory in order to perform the Extract, Transform and Load method. After performing the ETL, I used various Pyspark functions on the vine data in order to find what trends the data is pointing towards. 
 
-![insert customer table]()
-![insert review table]()
-![insert products table]()
-![vine table]()
+### Customer Table 
+![customer_table.PNG](resouces/customer_table.PNG)
+
+### Review ID Table
+![review_table.PNG](resouces/review_table.PNG)
+
+### Products Table
+![products_table.PNG](resouces/products_table.PNG)
+
+### Vine Table
+![vine_table.PNG](resouces/vine_table.PNG)
 
 
 ## Results
 
-![insert paid vine](paid vine) ![insert nonpaid vine](nonpaid vine)
-
-How many Vine reviews and non-Vine reviews were there?
+**How many Vine reviews and non-Vine reviews were there?**
 
 When determining which reviews were Vine reviews and which weren’t, I first used the filter() method and created two separate tables based on the vine column for “Y”s and for “N”s. Afterwards, I used the count() method for both tables to get a final count of 94 Vine reviews and 40471 Non-Vine reviews.
 
-How many Vine reviews were 5 stars? How many non-Vine reviews were 5 stars?
+### Vine Reviews
+![paid_vine.PNG](resouces/paid_vine.PNG) 
+
+### Non-Vine Reviews
+![nonpaid_vine](resouces/nonpaid_vine.PNG)
+
+**How many Vine reviews were 5 stars? How many non-Vine reviews were 5 stars?**
 
 To determine how many 5 star ratings each had, I applied a filter on the star_rating column for each respective table. I ended up with 48 Vine 5 Stars and 15,663 Non-Vine 5 Stars.
 
-What percentage of Vine reviews were 5 stars? What percentage of non-Vine reviews were 5 stars?
+**What percentage of Vine reviews were 5 stars? What percentage of non-Vine reviews were 5 stars?**
 
 For these figures, I performed a simple math function of dividing the total count of 5 star ratings by the total count of each respective table. 51.06% of Vine reviews were rated 5 stars while 38.70% of Non-Vine reviews were rated 5 stars.
 
